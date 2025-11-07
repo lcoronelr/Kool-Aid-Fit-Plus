@@ -1,3 +1,3 @@
 # Kool-Aid-Fit-Plus
 
-authors: Jake & Luis
+Authors: Jake & Luis
