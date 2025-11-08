@@ -1,10 +1,16 @@
-const http = require('http');
+const express = require('express');
+const path = require('path');
+const app = express();
 const port = 3000;
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
+// Route for the home page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-server.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
+
+app.listen(port, () => {
+  console.log(`KoolAid website running at http://localhost:${port}/`);
 });
