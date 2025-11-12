@@ -149,10 +149,7 @@
         }
 
         .highlight-oh-yeah {
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffd700;
         }
 
         /* Interactive Hero Button */
@@ -206,6 +203,35 @@
         .hero-content {
             position: relative;
             z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-text-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-video-container {
+            flex: 0 0 350px;
+            width: 350px;
+            height: 600px;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 6px solid white;
+            position: relative;
+        }
+
+        .hero-video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .hero h1 {
@@ -690,7 +716,6 @@
         }
 
 
-
         .community-icon svg {
             color: #1976d2;
             filter: drop-shadow(0 4px 6px rgba(25, 118, 210, 0.2));
@@ -800,49 +825,60 @@
 </head>
 <body>
     <!-- Hero Section -->
-    <div class="hero" id="hero-section">
-        <div class="container hero-content parallax-container" id="parallax-content">
-            <div style="text-align: center; margin-bottom: 15px;">
-                <h1 class="brand-title">Kool-Aid Fit +</h1>
-            </div>
-            <h1 class="main-heading">🥤 <span class="highlight-oh-yeah">OH YEAH!</span><br>KOOL AID+ REWARDS</h1>
-            <p>Fuel your active lifestyle, earn <span class="highlight-awesome">Awesome</span> rewards, and build a healthier community together!</p>
-            
-            <div class="tagline-container">
-                <div class="tagline">
-                    <span class="typed-text" id="typed-text"></span>
+<div class="hero" id="hero-section">
+    <div class="container">
+        <div class="hero-content parallax-container" id="parallax-content">
+            <!-- Text Content -->
+            <div class="hero-text-content">
+                <div style="margin-bottom: 15px;">
+                    <h1 class="brand-title">Kool-Aid Fit + Rewards</h1>
+                </div>
+                <h1 class="main-heading"><span class="highlight-oh-yeah">OH YEAH!</span></h1>
+                <p>Fuel your active lifestyle, earn <span class="highlight-awesome">Awesome</span> rewards, and build a healthier community together!</p>
+                <div class="tagline-container">
+                    <div class="tagline">
+                        <span class="typed-text" id="typed-text"></span>
+                    </div>
+                </div>
+
+                <!-- Social Proof Stats -->
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="10000">0</div>
+                        <div class="stat-label">Active Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50000">0</div>
+                        <div class="stat-label">Points Redeemed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% <span class="highlight-free">FREE</span> to Join</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Social Proof Stats -->
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="10000">0</div>
-                    <div class="stat-label">Active Members</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="50000">0</div>
-                    <div class="stat-label">Points Redeemed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="100">0</div>
-                    <div class="stat-label">% <span class="highlight-free">FREE</span> to Join</div>
-                </div>
-            </div>
-
-            <!-- Interactive CTA Button -->
-            <div style="margin-top: 50px;">
-                <a href="#how-it-works" class="hero-cta-btn">Get Started <span class="highlight-free">FREE</span> →</a>
+            <!-- Video Container -->
+            <div class="hero-video-container">
+                <video autoplay loop muted playsinline>
+                    <source src="KoolAidVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator" onclick="document.getElementById('how-it-works').scrollIntoView({behavior: 'smooth'});">
-            <span>Scroll to explore</span>
-            <div class="scroll-arrow"></div>
+        <!-- Interactive CTA Button (Centered) -->
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="#how-it-works" class="hero-cta-btn">Get Started <span class="highlight-free">FREE</span> →</a>
         </div>
     </div>
 
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" onclick="document.getElementById('how-it-works').scrollIntoView({behavior: 'smooth'});">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow"></div>
+    </div>
+</div>
     <script>
         // Infinite cycling typewriter effect
         const phrases = [
@@ -1109,6 +1145,7 @@
     <footer>
         <div class="container">
             <p style="font-size: 1.2em; margin-bottom: 10px;">&copy; 2025 Kool Aid+ • Natural • Sustainable • Transparent</p>
+            <p style="font-size: 1.2em; margin-bottom: 4px"> On our honor, we did not recieve or gave any unacknowledged aid on this website </p>
         </div>
     </footer>
 </body>
