@@ -1,22 +1,20 @@
-# Kool-Aid-Fit-Plus
+# Kool-Aid Fit+ Rewards Website
 
-Authors: Jake & Luis
+## 🎓 Course Information
+**Marketing 211** - Professor Benedikt Alberternst
 
-## To run 
-```bash 
-npm install
-```
+## 👥 Team Members
+- Rachel Arzt
+- Luis Coronel
+- Alana O'Hanlon
+- Jake Schwartz
 
-then:
+## 🛠️ Development
+- **Jake Schwartz** - Development with Claude AI
+- **Luis Coronel** - Corrections and implementation
 
-```bash
-npm start
-```
+## 📝 Honor Code
+On our honor, we did not receive or give any unacknowledged aid on this website.
 
-## to debug
-
-kill the port: 
-
-```bash
-npx kill-port {number of port}
-```
+---
+© 2025 Kool-Aid Fit+ • Marketing 211 Project
