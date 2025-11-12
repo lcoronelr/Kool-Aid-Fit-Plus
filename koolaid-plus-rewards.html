@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kool Aid+ Rewards - Fuel Your Active Life</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background-color: #f5f0eb;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #d4735e 0%, #c85a47 50%, #e8917a 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffffff"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"/></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        .hero h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .tagline {
+            font-size: 1.2em;
+            margin-top: 20px;
+            opacity: 0.95;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-family: 'Fredoka', sans-serif;
+            text-align: center;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #c85a47;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 3px 3px 0px rgba(212, 115, 94, 0.2);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3em;
+            color: #6c757d;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 4px solid #66bb6a;
+            box-shadow: 8px 8px 0px rgba(102, 187, 106, 0.3);
+        }
+
+        .step:hover {
+            transform: translateY(-10px) rotate(-2deg);
+            box-shadow: 12px 12px 0px rgba(102, 187, 106, 0.4);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #66bb6a, #43a047);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            font-weight: 800;
+            margin: 0 auto 25px;
+            font-family: 'Fredoka', sans-serif;
+            box-shadow: 0 6px 0px rgba(0,0,0,0.2);
+        }
+
+        .step h3 {
+            color: #43a047;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+            font-weight: 700;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .step p {
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        /* Earn Points Section */
+        .earn-points {
+            background: linear-gradient(to bottom, #faf5f0, #f9ede5);
+        }
+
+        .earn-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .earn-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 10px 10px 0px rgba(212, 115, 94, 0.3);
+            border: 5px solid #d4735e;
+            transition: all 0.3s ease;
+        }
+
+        .earn-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 15px 15px 0px rgba(212, 115, 94, 0.4);
+        }
+
+
+
+        .points-badge {
+            background: linear-gradient(135deg, #c85a47, #b84936);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.4em;
+            display: inline-block;
+            margin-top: 20px;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+            box-shadow: 0 6px 0px rgba(0,0,0,0.2);
+            border: 3px solid white;
+        }
+
+        .earn-card h3 {
+            color: #c85a47;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 700;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .earn-card p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Rewards Section */
+        .rewards {
+            background-color: white;
+        }
+
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .reward-card {
+            background: linear-gradient(135deg, #faf5f0 0%, #f9ede5 100%);
+            padding: 45px 35px;
+            border-radius: 30px;
+            text-align: center;
+            border: 5px solid #d4735e;
+            transition: all 0.3s ease;
+            box-shadow: 8px 8px 0px rgba(212, 115, 94, 0.3);
+        }
+
+        .reward-card:hover {
+            border-color: #c85a47;
+            transform: translateY(-10px) rotate(-2deg);
+            box-shadow: 12px 12px 0px rgba(200, 90, 71, 0.4);
+        }
+
+
+
+        .reward-card h3 {
+            color: #c85a47;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+            font-weight: 700;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .reward-card p {
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .reward-points {
+            background: linear-gradient(135deg, #d4735e, #c85a47);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.5em;
+            display: inline-block;
+            margin-top: 20px;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+            box-shadow: 0 6px 0px rgba(0,0,0,0.2);
+            border: 3px solid white;
+        }
+
+        /* Pooled Rewards Section */
+        .pooled-rewards {
+            background: linear-gradient(135deg, #d4735e 0%, #c85a47 50%, #b84936 100%);
+            color: white;
+            margin-top: 60px;
+            padding: 60px 50px;
+            border-radius: 30px;
+            text-align: center;
+            border: 6px solid #b84936;
+            box-shadow: 12px 12px 0px rgba(184, 73, 54, 0.4);
+        }
+
+        .pooled-rewards h3 {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+        }
+
+        .pooled-rewards p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .pooled-goal {
+            background: white;
+            color: #c85a47;
+            padding: 25px 50px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.7em;
+            display: inline-block;
+            margin-top: 20px;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+            box-shadow: 0 8px 0px rgba(0,0,0,0.2);
+        }
+
+        /* Community Section */
+        .community {
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+        }
+
+        .community-content {
+            background: white;
+            padding: 60px 50px;
+            border-radius: 30px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 10px 10px 0px rgba(66, 165, 245, 0.3);
+            border: 5px solid #42a5f5;
+        }
+
+
+
+        .community-content h3 {
+            color: #1976d2;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .community-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        /* Join Section */
+        .join {
+            background: white;
+            text-align: center;
+        }
+
+        .join-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .join-steps {
+            text-align: left;
+            margin: 50px auto;
+            max-width: 600px;
+        }
+
+        .join-step {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 25px 35px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            border-left: 8px solid #66bb6a;
+            font-size: 1.15em;
+            box-shadow: 5px 5px 0px rgba(102, 187, 106, 0.2);
+            font-weight: 500;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #66bb6a, #43a047);
+            color: white;
+            padding: 25px 60px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 800;
+            margin-top: 40px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+            box-shadow: 0 8px 0px rgba(0,0,0,0.2);
+            border: 4px solid white;
+            outline: 4px solid #43a047;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 0px rgba(0,0,0,0.3);
+        }
+
+        /* Benefits Banner */
+        .benefits {
+            background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 50%, #0288d1 100%);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .benefit-item {
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            border: 4px solid white;
+            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .benefit-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .benefit-icon svg {
+            color: #0288d1;
+            filter: drop-shadow(0 4px 6px rgba(2, 136, 209, 0.2));
+        }
+
+        .earn-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .earn-icon svg {
+            color: #c85a47;
+            filter: drop-shadow(0 4px 6px rgba(200, 90, 71, 0.2));
+        }
+
+        .reward-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .reward-icon svg {
+            color: #d4735e;
+            filter: drop-shadow(0 4px 6px rgba(212, 115, 94, 0.2));
+        }
+
+
+
+        .community-icon svg {
+            color: #1976d2;
+            filter: drop-shadow(0 4px 6px rgba(25, 118, 210, 0.2));
+        }
+
+        .benefit-item h4 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-family: 'Fredoka', sans-serif;
+            text-transform: uppercase;
+            color: #0288d1;
+        }
+
+        .benefit-item p {
+            font-size: 1.05em;
+            font-weight: 500;
+            color: #2d3436;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2d3436 0%, #43a047 50%, #1976d2 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .pooled-rewards {
+                padding: 40px 25px;
+            }
+
+            .community-content {
+                padding: 40px 25px;
+            }
+
+            .step {
+                padding: 30px 20px;
+            }
+
+            .earn-card {
+                padding: 40px 30px;
+            }
+
+            .reward-card {
+                padding: 35px 25px;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .mascot-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="font-size: 4em; margin-bottom: 10px; text-shadow: 4px 4px 0px rgba(0,0,0,0.2);">Kool-Aid Fit +</h1>
+            </div>
+            <h1>🥤 OH YEAH! KOOL AID+ REWARDS</h1>
+            <p>Fuel your active lifestyle, earn AWESOME rewards, and build a healthier community together!</p>
+            <p class="tagline">💚 Natural ingredients • 🌱 Sustainable choices • ✨ Transparent benefits</p>
+        </div>
+    </div>
+
+    <!-- Benefits Banner -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎁</div>
+                    <h4>Exclusive Rewards</h4>
+                    <p>Free drinks, merch, and fitness classes!</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💪</div>
+                    <h4>Community Workouts</h4>
+                    <p>Weekly sessions with fellow members!</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">❤️</div>
+                    <h4>Give Back</h4>
+                    <p>Pool points for charity donations!</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏰</div>
+                    <h4>Points Never Expire</h4>
+                    <p>Earn and redeem at your own pace!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">HOW IT WORKS</h2>
+            <p class="section-subtitle">Getting started is SUPER simple and TOTALLY FREE!</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Account</h3>
+                    <p>Sign up for your free Kool Aid+ Rewards account in seconds. No fees, EVER!</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Earn Points</h3>
+                    <p>Scan bottle caps, share on social, and refer friends to rack up points FAST!</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Redeem Rewards</h3>
+                    <p>Trade points for free drinks, exclusive merch, fitness classes, and MORE!</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Give Back</h3>
+                    <p>Pool points with others to support causes that matter to YOU!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earn Points -->
+    <section class="earn-points">
+        <div class="container">
+            <h2 class="section-title">WAYS TO EARN POINTS</h2>
+            <p class="section-subtitle">Every action brings you closer to AWESOME rewards!</p>
+            
+            <div class="earn-cards">
+                <div class="earn-card">
+                    <div class="earn-icon">🔍</div>
+                    <h3>Scan Your Drink</h3>
+                    <p>Every Kool Aid+ bottle has a unique code inside the cap. Scan it in your account to earn points INSTANTLY!</p>
+                    <div class="points-badge">+1 Point</div>
+                </div>
+                
+                <div class="earn-card">
+                    <div class="earn-icon">📱</div>
+                    <h3>Share on Social</h3>
+                    <p>Post a photo with your Kool Aid+ drink and tag us. Show the world your healthy lifestyle and SCORE BIG!</p>
+                    <div class="points-badge">+50 Points</div>
+                </div>
+                
+                <div class="earn-card">
+                    <div class="earn-icon">🤝</div>
+                    <h3>Refer a Friend</h3>
+                    <p>Know someone who'd LOVE Kool Aid+? Share your referral link and you BOTH benefit!</p>
+                    <div class="points-badge">+50 Points</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rewards -->
+    <section class="rewards">
+        <div class="container">
+            <h2 class="section-title">YOUR REWARDS</h2>
+            <p class="section-subtitle">Choose rewards that match YOUR lifestyle!</p>
+            
+            <div class="rewards-grid">
+                <div class="reward-card">
+                    <div class="reward-icon">🥤</div>
+                    <h3>Free Bottle</h3>
+                    <p>Redeem for ANY Kool Aid+ drink of your choice!</p>
+                    <div class="reward-points">15 Points</div>
+                </div>
+                
+                <div class="reward-card">
+                    <div class="reward-icon">🏋️</div>
+                    <h3>Online Class</h3>
+                    <p>Access exclusive fitness classes from our community trainers!</p>
+                    <div class="reward-points">30 Points</div>
+                </div>
+                
+                <div class="reward-card">
+                    <div class="reward-icon">👕</div>
+                    <h3>Branded Merch</h3>
+                    <p>Rock your Kool Aid+ gear with PRIDE! T-shirts, hats, and more!</p>
+                    <div class="reward-points">50 Points</div>
+                </div>
+            </div>
+
+            <!-- Pooled Rewards -->
+            <div class="pooled-rewards">
+                <h3>🌟 POOL POINTS FOR GOOD!</h3>
+                <p>Join forces with other members! When the community pools together enough points, we'll make a donation to partner charities supporting health and wellness initiatives.</p>
+                <p><strong>How it works:</strong> Donate your points to the community pool. When WE reach the goal TOGETHER, we donate to causes that align with our mission of health and sustainability.</p>
+                <div class="pooled-goal">Goal: 1,000 Points = Charity Donation</div>
+                <p style="margin-top: 25px; font-size: 1em;">Your points, your choice—keep them for personal rewards or contribute to something BIGGER!</p>
+                <div style="margin-top: 30px;">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community -->
+    <section class="community">
+        <div class="container">
+            <h2 class="section-title">JOIN THE MOVEMENT</h2>
+            <p class="section-subtitle">More than rewards—it's a COMMUNITY!</p>
+            
+            <div class="community-content">
+                <div class="community-icon">🎉</div>
+                <h3>Weekly Community Workouts</h3>
+                <p><strong>EVERY WEEK</strong>, members of our community host active workout sessions that you can join live or stream from our website!</p>
+                <p>From HIIT to yoga, these sessions are designed by REAL people, for REAL people looking to stay active and connected.</p>
+                <p><strong>📍 In-person:</strong> Sessions hosted in popular cities</p>
+                <p><strong>💻 Online:</strong> Stream live from ANYWHERE!</p>
+                <p style="margin-top: 30px; font-style: italic; font-size: 1.3em;">Because wellness is better TOGETHER! 💚</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="join">
+        <div class="container">
+            <h2 class="section-title">READY TO START?</h2>
+            <p class="section-subtitle">Join Kool Aid+ Rewards today—it's COMPLETELY FREE!</p>
+            
+            <div class="join-content">
+                <div class="join-steps">
+                    <div class="join-step">
+                        <strong>Step 1:</strong> Visit the Kool Aid+ website or download our app
+                    </div>
+                    <div class="join-step">
+                        <strong>Step 2:</strong> Create your FREE account with your email
+                    </div>
+                    <div class="join-step">
+                        <strong>Step 3:</strong> Start earning points IMMEDIATELY!
+                    </div>
+                </div>
+
+                <p style="font-size: 1.15em; margin-bottom: 25px; font-weight: 600;"><strong>Membership is open to EVERYONE!</strong> No purchase necessary to join, though you'll need to engage with Kool Aid+ products and our community to earn points.</p>
+                
+                <a href="#" class="cta-button">Sign Up Now!</a>
+                
+                <p style="margin-top: 40px; color: #6c757d; font-size: 1em;">Questions? Contact us at rewards@koolaidplus.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.2em; margin-bottom: 10px;">&copy; 2025 Kool Aid+ • Natural • Sustainable • Transparent</p>
+            <p style="margin-top: 15px; font-size: 1.1em;">💪 Fuel your active life • 🌟 Build community • ❤️ Make an impact</p>
+        </div>
+    </footer>
+</body>
+</html>
